@@ -68,13 +68,14 @@ fieldset {
 
 .result__video-container {
   width: 716px;
-  height: 386px;
   position: relative;
+  display: flex;
 }
 
 .result__video {
   width: 100%;
   height: 100%;
+  align-self: flex-end;
 }
 
 .search-form {
@@ -101,6 +102,20 @@ fieldset {
   gap: 5px;
   width: fit-content;
   cursor: pointer;
+  user-select: none;
+}
+
+:focus {
+  outline: none;
+}
+
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
+.search-form__label:has(input[type="checkbox"]):hover {
+  text-decoration: underline;
 }
 
 .search-form__label-text {
@@ -111,7 +126,7 @@ fieldset {
 .search-form__textfield {
   appearance: none;
   border: none;
-  padding: 0px;
+  padding: 1.5px;
   color: rgba(255, 255, 255, 0.7);
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
@@ -129,10 +144,17 @@ fieldset {
 .search-form__pseudo-checkbox {
   width: 19px;
   height: 19px;
-  background-color: #000;
   border: 1px solid #fff;
   justify-self: center;
   align-self: center;
+}
+
+input[type="checkbox"]:checked + .search-form__pseudo-checkbox {
+  height: 19px;
+  width: 19px;
+  outline: 1px solid #000;
+  outline-offset: -2px;
+  background-color: #fff;
 }
 
 .button {
@@ -146,6 +168,24 @@ fieldset {
   text-align: center;
   border: 1px solid #fff;
   width: 100%;
+  height: 34px;
+}
+
+.button:hover {
+  text-decoration: underline;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
+.button:active {
+  background-color: #545050;
 }
 
 .search-form__submit-button {
@@ -191,9 +231,24 @@ fieldset {
 
 .content__card-link {
   text-decoration: none;
+  display: block;
+  margin: 2px;
+}
+
+.content__card-link_current {
+  background-color: #545050;
+}
+
+.content__card-link:focus {
+  outline: none;
+}
+
+.content__card-link:focus-visible {
+  outline: 1px solid #fff;
 }
 
 .content__video-card {
+  padding: 2px;
   display: flex;
   height: 103px;
   justify-content: space-between;
@@ -203,6 +258,11 @@ fieldset {
   display: flex;
   flex-direction: column;
   gap: 6px;
+}
+
+.content__video-card-description-container:hover {
+  text-decoration: underline #fff;
+  text-underline-position: under;
 }
 
 .content__video-card-title {
