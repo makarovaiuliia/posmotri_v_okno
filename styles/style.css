@@ -13,7 +13,7 @@ html {
   block-size: 100%;
   margin: auto;
   color: #fff;
-  font-family: "Fira Sans Condensed", sans-serif;
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
   display: flex;
@@ -43,6 +43,7 @@ ol {
 fieldset {
   border: none;
 }
+
 .visually-hidden {
   position: absolute;
   inline-size: 1px;
@@ -116,7 +117,7 @@ fieldset {
   outline-offset: 1px;
 }
 
-.search-form__label:has(input[type="checkbox"]):hover {
+.search-form__label:has(input[type='checkbox']):hover {
   text-decoration: underline;
 }
 
@@ -129,8 +130,8 @@ fieldset {
   appearance: none;
   border: none;
   padding: 1.5px;
-  color: rgba(255, 255, 255, 0.7);
-  font-family: "Fira Sans Condensed", sans-serif;
+  color: rgb(255 255 255 / 0.7);
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: transparent;
   font-weight: 400;
@@ -151,7 +152,7 @@ fieldset {
   align-self: center;
 }
 
-input[type="checkbox"]:checked + .search-form__pseudo-checkbox {
+input[type='checkbox']:checked + .search-form__pseudo-checkbox {
   height: 19px;
   width: 19px;
   outline: 1px solid #000;
@@ -161,8 +162,7 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox {
 
 .button {
   color: #fff;
-  text-align: center;
-  font-family: Fira Sans Condensed;
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   font-weight: bold;
   cursor: pointer;
@@ -202,7 +202,7 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox {
 
 .title {
   color: #fff;
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   font-size: 75px;
   font-weight: bold;
   line-height: 94%;
@@ -228,7 +228,7 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox {
 }
 
 .conten__list-item:last-child {
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
 .content__card-link {
@@ -269,7 +269,7 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox {
 
 .content__video-card-title {
   color: #fff;
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   font-size: 30px;
   font-weight: bold;
   line-height: 100%;
