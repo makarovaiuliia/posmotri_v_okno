@@ -55,8 +55,7 @@ fieldset {
 
 .content {
   display: grid;
-  grid-template-columns: 716px 398px;
-  grid-template-rows: 534px;
+  grid-template-columns: 711px 398px;
   justify-content: center;
   column-gap: 30px;
   padding: 133px 30px;
@@ -70,7 +69,7 @@ fieldset {
 }
 
 .result__video-container {
-  width: 716px;
+  width: 100%;
   position: relative;
   display: flex;
 }
