@@ -183,10 +183,6 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox {
   text-underline-position: under;
 }
 
-.button:focus {
-  outline: none;
-}
-
 .button:focus-visible {
   outline: 1px solid #fff;
   outline-offset: 1px;
@@ -197,18 +193,20 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox {
 }
 
 .more-button {
-  max-width: 399px;
+  max-width: 397px;
+  margin-bottom: 2px; /* это решение позволило мнер решить проблему с тем, что outline у more-buttom не отображался при focus-visible из-за overflow: auyo у content-list. Outline также попадал под праивла overflow. Пришлось выкручиваться так*/
+  margin-left: 2px;
 }
 
 .search-form__submit-button {
-  align-self: flex-end;
+  align-self: end;
+  justify-self: flex-end;
 }
 
 .content__details {
   display: flex;
   flex-direction: column;
   gap: 26px;
-  justify-items: center;
 }
 
 .title {
@@ -226,9 +224,9 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox {
 
 .content__list {
   height: 298px;
-  overflow-y: auto;
+  overflow: auto;
   position: relative;
-  align-self: end;
+  align-self: flex-end;
 }
 
 .content__list::-webkit-scrollbar {
@@ -236,10 +234,10 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox {
 }
 
 .content__list-item {
-  margin-bottom: 35px;
+  margin-bottom: 33px;
 }
 
-.conten__list-item:last-child {
+.content__list-item:last-child {
   margin-bottom: 0;
 }
 
@@ -271,7 +269,7 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox {
 
 .content__video-card:hover {
   text-decoration: underline #fff;
-  /* text-underline-position: under; */
+  /* text-underline-position: under; Не могу использовать это свойство, так как overflow:hidden в content__video-card-title не дает линии опуститься за пределфы высоты линии заголовка. Причем если я сделаю высоту линии где-то 140px, то все будет работать, но будет уже не по макету */
 }
 
 .content__video-card-description-container {
@@ -286,7 +284,7 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox {
   font-family: Oswald, sans-serif;
   font-size: 30px;
   font-weight: bold;
-  line-height: 100%;
+  line-height: 115%;
   text-transform: uppercase;
   text-overflow: ellipsis;
   white-space: nowrap;
